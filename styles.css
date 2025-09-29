@@ -6,3 +6,20 @@ h1{
     color: rgb(126, 62, 62);
     text-align: center;
 }
+.about {
+    color: mediumseagreen;
+    text-align: left;
+    text-emphasis: bold;
+}
+.skills{
+    color: chocolate;
+    text-align: left;
+}
+.projects{
+    color: indianred;
+    text-align: left;
+}
+.contact{
+    color: navajowhite;
+    text-align: left;
+}
