@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="resumeStyles.css">
+    <head>
+  <link rel="stylesheet" href="resumeStyles.css">
+  <style>
+    @media print {
+      @page { size: letter; margin: 0.5in; }
+      body { font-family: Arial, sans-serif; font-size: 11pt; }
+      table { width: 100%; border-collapse: collapse; }
+      td { vertical-align: top; padding: 2px 6px; }
+      ul { margin: 4px 0; }
+      * { page-break-inside: avoid; }
+    }
+  </style>
+</head>
 
 
-<div class="body">
+<body>
 <!--Name-->
 <h1>Aden Roof</h1>
 <p>Email: | Location: </p>
@@ -214,5 +226,5 @@
     </td>
 </tr>
 </table>
-</div>
+</body>
 </html>
