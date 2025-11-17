@@ -1,16 +1,78 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
+<!--Print helper made by chat GPT-->
+  <meta charset="utf-8" />
   <link rel="stylesheet" href="resumeStyles.css">
+
+  <!-- Print-focused condensed styles -->
   <style>
-    @media print {
-      @page { size: letter; margin: 0.5in; }
-      body { font-family: Arial, sans-serif; font-size: 11pt; }
-      table { width: 100%; border-collapse: collapse; }
-      td { vertical-align: top; padding: 2px 6px; }
-      ul { margin: 4px 0; }
-      * { page-break-inside: avoid; }
+    /* --- Global on-screen styling (kept small) --- */
+    body {
+      font-family: Arial, sans-serif;
+      color: #000;
+      margin: 0.2in;
+      -webkit-print-color-adjust: exact;
     }
+    h1 { font-size: 16pt; margin: 0 0 4px 0; }
+    h2 { font-size: 10.5pt; margin: 0 0 6px 0; }
+
+    /* --- Print rules --- */
+    @media print {
+      /* page size, minimal margins */
+      @page { size: letter; margin: 0.25in; }
+
+      /* Tighten everything to fit one page */
+      html, body {
+        width: 8.5in;
+        height: 11in;
+        margin: 0;
+        padding: 0;
+        font-size: 10pt;       /* base font-size for compactness */
+        line-height: 1.08;     /* tighter line-height */
+        overflow: hidden;
+      }
+
+      /* Reduce heading sizes for print */
+      h1 { font-size: 14pt; margin-bottom: 4px; }
+      h2 { font-size: 10pt; margin-bottom: 4px; }
+
+      /* Table layout for two-column sections */
+      table.resume {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table.resume td {
+        vertical-align: top;    /* ensure content starts at top of cell */
+        padding: 2px 6px;
+        page-break-inside: avoid;
+      }
+      /* Prevent splitting a row across pages */
+      tr { page-break-inside: avoid; }
+
+      /* Make nested lists compact and avoid large margins */
+      ul {
+        margin: 4px 0 6px 18px;
+        padding: 0;
+      }
+      li { margin: 0 0 4px 0; }
+
+      /* Strongly discourage page breaks inside major blocks */
+      .section, .section > div {
+        page-break-inside: avoid;
+        page-break-before: avoid;
+        page-break-after: avoid;
+      }
+
+      /* If the browser still splits pages, scale down slightly (last resort) */
+      /* Uncomment to allow a tiny scale down: */
+      /* body { transform-origin: top left; transform: scale(0.98); } */
+    }
+
+    /* On-screen helper — keep layout readable while editing */
+    .right { text-align: right; }
+    .section-title { padding-top: 2px; }
+    .sub { font-weight: normal; font-size: 9pt; color: #222; }
   </style>
 </head>
 
@@ -159,7 +221,7 @@
     <td width="70%">
         <table width="90%">
             <tr>
-                <td><strong>Nothing Bundt Cakes, Columbia, SC - Guest service Representative</strong></td>
+                <td><strong>Nothing Bundt Cakes, Columbia, SC - GSR</strong></td>
                 <td align="right">October 2023 - December 2024</td>
             </tr>
             <tr>
