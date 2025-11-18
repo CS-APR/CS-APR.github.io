@@ -12,11 +12,11 @@ h1{
     text-emphasis: bold;
 }
 .skills{
-    color: chocolate;
+    color: rgb(124, 65, 23);
     text-align: left;
 }
 .projects{
-    color: indianred;
+    color: rgb(129, 58, 58);
     text-align: left;
 }
 .contact{
